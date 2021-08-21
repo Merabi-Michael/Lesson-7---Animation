@@ -1,0 +1,105 @@
+body {
+  background-color: blueviolet;
+}
+.main-container {
+  background-size: cover;
+  position: relative;
+  z-index: 28;
+  height: 400px;
+}
+.sea {
+  position: absolute;
+  top: 100%;
+  width: 150%;
+  height: 400px;
+	position: absolute;
+	right: 0;
+	animation: sea 5s linear infinite;
+}
+@keyframes sea {
+  0% {transform: translateX(0);
+  }
+  100% {transform: translateX(30%);}
+}
+.moon {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+  z-index: 21;
+}
+.moon:hover {
+  width: 250px;
+  height: 250px;
+}
+.moon {
+  filter: brightness(0.9)
+}
+.stars-left {
+  height: 400px;
+  filter: brightness(1);
+}
+.stars-left:hover {
+  transform: rotate(0.5deg);
+}
+.stars-right {
+  position: absolute;
+  margin: right;
+  height: 400px;
+  filter: brightness(1);
+}
+.stars-right:hover {
+  transform: rotate(0.5deg);
+}
+.shootignStar {
+ position: absolute;
+ z-index: 10;
+ width: 150px;
+ margin-right: 100px;
+ animation: cometdown;
+ animation-duration: 5s;
+ animation-iteration-count: infinite;
+}
+@keyframes cometdown {
+  from {top: 0px; transform: translateY(50px) ;}
+  to {top: 280px;}
+}
+.the-earth {
+  position: absolute;
+  width: 100px;
+  margin-right: 20px;
+  margin-top: 150px;
+  filter: brightness(1);
+}
+.the-earth:hover {
+  transform: rotate3d(1, 1, 1, 20deg);
+}
+.rocket {
+  position: absolute;
+  width: 50px;
+  margin-left: 300px;
+  margin-top: 150px;
+  z-index: 5;
+  animation: flyrocket; 
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-direction: linear;
+
+}
+@keyframes flyrocket {
+  from {bottom: 0px; transform: translateY(-100%) ;}
+  to {top: 50px;}
+}
+.darkhole {
+  position: absolute;
+  width: 200px;
+  z-index: 3;
+  margin-left: 400px;
+  margin-top: 110px;
+  filter: brightness(0.9);
+}
+.darkhole:hover {
+  transform: rotate3d(3, 3, 3, 30deg);
+}
